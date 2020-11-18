@@ -16,21 +16,36 @@ sleep(0.6)
 print('5 = Jogo da adivinhaçao:')
 sleep(0.6)
 print('6 = Dowload do script')
+sleep(0.6)
+print('7 = Radar interativo')
+sleep(0.6)
+print('8 = sorteador')
+sleep(0.6)
+print('9 = calculadora')
 print(' ')
-num1 = int(input('Qual irá escolher? '))
+num1 = int(input('Qual irá escolher? ').strip())
 
 
 if num1 == 1:
-    temp = float(input('Informe a temperatura em °C: '))
+    print('CARREGANDO MODULO...')
+    sleep(2.3)
+    print('MODULO CARREGADO COM SUCESSO!')
+    sleep(1.3)
+    print(' ')
+    temp = float(input('Informe a temperatura em °C: ').strip())
     calc = (temp * 9 / 5 + 32)
     print('A temperatura em {}°C corresponde a {}ºF'.format(temp, calc))
     sleep(50)
     print('50')
 
 
-if num1 == 2:
+elif num1 == 2:
+    print('CARREGANDO MODULO...')
+    sleep(2.3)
+    print('MODULO CARREGADO COM SUCESSO!')
+    sleep(1.3)
     print(' ')
-    a = int(input('Digite um número para saber a tabuada: '))
+    a = int(input('Digite um número para saber a tabuada: ').strip())
     print(' ')
     print('Tabuada do {}'.format(a))
     print('===========')
@@ -49,7 +64,11 @@ if num1 == 2:
     print('.....')
 
 
-if num1 == 3:
+elif num1 == 3:
+    print('INICIANDO ROBO... POR FAVOR ESPERE UM MOMENTO')
+    sleep(2.30)
+    print('ROBO CARREGADO COM SUCESSO!')
+    sleep(1.20)
     print('(no final eu irei falar todas informaçoes recebidas)')
     print(' ')
     print('Responda:')
@@ -111,7 +130,7 @@ if num1 == 3:
         sleep(50)
         print('....')
 
-if num1 == 4:
+elif num1 == 4:
     print(' ')
     print('Creditos ao criador:')
     print('')
@@ -124,10 +143,14 @@ if num1 == 4:
     print('.....')
 
 
-if num1 == 5:
+elif num1 == 5:
     from random import randint
     from time import sleep
-
+    print('CARREGANDO MODULO...')
+    sleep(2.3)
+    print('MODULO CARREGADO COM SUCESSO!')
+    sleep(1.3)
+    print(' ')
     comp = randint(0, 5)
     print('-=-' * 20)
     print('Vou pensar em um número entre 0 e 5. Tente adivinhar...')
@@ -145,7 +168,7 @@ if num1 == 5:
         print('...')
 
 
-if num1 == 6:
+elif num1 == 6:
     sleep(2)
     print(' ')
     print('Dowload do script (Robo interativo.py)')
@@ -157,3 +180,109 @@ if num1 == 6:
     print('COPIA NAO COMÉDIA')
     sleep(50)
     print('...........')
+
+
+elif num1 == 7:
+    from time import sleep
+
+    valor = float(input('Qual a velocidade maxima do carro(quilometros)? ').strip())
+    a = int(input('Qual a velocidade atual do carro(quilometros)? ').strip())
+
+    if a <= valor:
+        print('Processando...')
+        sleep(1.4)
+        print(' ')
+        print('O processo terminará em 3')
+        sleep(1)
+        print(' ')
+        print('O processo terminará em 2')
+        sleep(1)
+        print(' ')
+        print('O processo terminará em 1')
+        sleep(1)
+        print(' ')
+        print('Processo concluído com sucesso!')
+        sleep(1)
+        print(' ')
+        print('\034[35m''Tenha um bom dia, dirija com segurança!')
+        sleep(50)
+        print(' ')
+    else:
+        print('Processando...')
+        sleep(1.4)
+        print(' ')
+        print('O processo terminará em 3')
+        sleep(1)
+        print(' ')
+        print('O processo terminará em 2')
+        sleep(1)
+        print(' ')
+        print('O processo terminará em 1')
+        sleep(1)
+        print(' ')
+        print('Processo concluído com sucesso!')
+        sleep(0.6)
+        print(' ')
+        multa = (a - valor) * 7
+        print('\033[31m''MULTADO!\033[37m Voce ultrapassou o limite de \033[35m{}Km'.format(valor))
+        print('Voce deve pagar uma multa de \033[36mR${:.2f}!'.format(multa))
+        print('Tenha um bom dia, dirija com segurança!')
+        print(' ')
+        sleep(50)
+        print(' ')
+
+if num1 == 8:
+    import random
+
+    n1 = str(input('Primeiro item = '))
+    n2 = str(input('Segundo item = '))
+    n3 = str(input('Terceiro item = '))
+    n4 = str(input('Quarto item = '))
+    lista = [n1, n2, n3, n4]
+    random.choice(lista)
+    print('o resultado foi {}'.format(lista))
+    print(lista)
+    sleep(50)
+    print(' ')
+
+
+if num1 == 9:
+    from time import sleep
+
+    print('CARREGANDO CALCULADORA ESPERE UM MOMENTO...')
+    sleep(1.5)
+    print('CALCULADORA CARREGADA COM SUCESSO!')
+    sleep(0.6)
+    print('CALCULADORA Python')
+    print(' ')
+    print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
+    print('use 1 para subtrair')
+    print('use 2 para somar')
+    print('use 3 para dividir')
+    print('use 4 para multiplicar')
+    print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
+
+    index = int(input('Voce deseja executar que tipo de operaçao? ').strip())
+    num1 = int(input('Digite o primeiro número: ').strip())
+    num2 = int(input('Digite o segundo número: ').strip())
+
+    if index == 1:
+        calc1 = num1 - num2
+        print('O resultado da subtraçao é: \033[33m{}'.strip().format(calc1))
+    elif index == 2:
+        calc2 = num1 + num2
+        print('O resultado da soma é: \033[33m{}'.strip().format(calc2))
+    elif index == 3:
+        calc3 = num1 / num2
+        print('O resultado da divisao é: \033[33m{}'.strip().format(calc3))
+    elif index == 4:
+        calc4 = num1 * num2
+        print('O resultado da multiplicaçao é: \033[33m{}'.strip().format(calc4))
+        sleep(50)
+        print(' ')
+    else:
+        print('Digite um valor válido por favor!')
+
+
+else:
+    print('Número incorreto, por favor digite um número válido!')
