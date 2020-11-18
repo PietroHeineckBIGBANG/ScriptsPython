@@ -3,7 +3,7 @@ from time import sleep
 print('=====Robo interativo======')
 print(' ')
 print('Qual voce quer ir?')
-print('Digite uma opiçao:')
+print('Digite uma opçao:')
 print(' ')
 print('1 = Transformador de graus celsius para graus ºF:')
 sleep(0.6)
@@ -22,6 +22,8 @@ sleep(0.6)
 print('8 = sorteador')
 sleep(0.6)
 print('9 = calculadora')
+sleep(0.6)
+print('10 = Pedra, Papel, Tesoura')
 print(' ')
 num1 = int(input('Qual irá escolher? ').strip())
 
@@ -282,6 +284,75 @@ if num1 == 9:
         print(' ')
     else:
         print('Digite um valor válido por favor!')
+
+if num1 == 10:
+    from random import randint
+    from time import sleep
+
+    itens = ('Pedra', 'Papel', 'Tesoura')
+    comp = randint(0, 2)
+    print('CARREGANDO...')
+    sleep(2)
+    print('CARREGADO COM SUCESSO!')
+    sleep(1)
+    print('=-' * 11)
+    print('PEDRA, PAPEL, TESOURA')
+    print('=-' * 11)
+    print('''Suas opçoes:
+    [ 1 ] PEDRA
+    [ 2 ] PEPEL
+    [ 3 ] TESOURA''')
+    jogador = int(input('Qual é a sua jogada? '))
+    print(' ')
+    sleep(1)
+    print('\033[31m''JO')
+    sleep(1)
+    print('\033[33m''KEN')
+    sleep(1)
+    print('\033[34m''PO!!!')
+    sleep(1)
+    print('\033[36m''-=' * 11)
+    print('\033[35m''O computador jogou {}'.format(itens[comp]))
+    print('O jogador jogou {}'.format(itens[jogador]))
+    print('\033[36m''-=' * 11)
+    print(' ')
+    if comp == 1:
+        if jogador == 1:
+            print('\033[31m''Empatou.')
+        elif jogador == 2:
+            print('\033[31m''Jogador venceu.')
+        elif jogador == 3:
+            print('\033[31m''Computador venceu.')
+        else:
+            print('\033[31m''Número inválido.')
+            sleep(50)
+            print(' ')
+
+    elif comp == 2:
+
+        if jogador == 1:
+            print('\033[31m''Computador venceu.')
+        elif jogador == 2:
+            print('\033[31m''Empatou.')
+        elif jogador == 3:
+            print('\033[31m''Jogador venceu.')
+        else:
+            print('\033[31m''Número inválido:')
+            sleep(50)
+            print(' ')
+
+    elif comp == 3:
+
+        if jogador == 1:
+            print('\033[31m''Jogador venceu.')
+        elif jogador == 2:
+            print('\033[31m''Computador venceu.')
+        elif jogador == 3:
+            print('\033[31m''Empate.')
+        else:
+            print('\033[31m''Número inválido:')
+            sleep(50)
+            print(' ')
 
 
 else:
