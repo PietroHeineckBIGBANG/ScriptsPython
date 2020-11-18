@@ -1,5 +1,5 @@
 from time import sleep
-print(' ''\033[32m')
+'\033[32m'
 print('=====Robo interativo======')
 print(' ')
 print('Qual voce quer ir?')
@@ -15,6 +15,7 @@ print('4 = Créditos:')
 sleep(0.6)
 print('5 = Jogo da adivinhaçao:')
 sleep(0.6)
+print('6 = Dowload do script')
 print(' ')
 num1 = int(input('Qual irá escolher? '))
 
@@ -23,6 +24,8 @@ if num1 == 1:
     temp = float(input('Informe a temperatura em °C: '))
     calc = (temp * 9 / 5 + 32)
     print('A temperatura em {}°C corresponde a {}ºF'.format(temp, calc))
+    sleep(50)
+    print('50')
 
 
 if num1 == 2:
@@ -42,6 +45,8 @@ if num1 == 2:
     print('{} x  9 = {}'.format(a,(a*9)))
     print('{} x 10 = {}'.format(a,(a*10)))
     print('===========')
+    sleep(50)
+    print('.....')
 
 
 if num1 == 3:
@@ -103,15 +108,20 @@ if num1 == 3:
             '\033[35m''Nome completo:{} {}, Idade:{} anos, Nascimento:{} de {} de {}, Gosta de fazer:{}, Filme Favorito:{}'.format(
                 nome,
                 sobNome, idade, dia, mes, ano, hobby, filme))
-
+        sleep(50)
+        print('....')
 
 if num1 == 4:
+    print(' ')
     print('Creditos ao criador:')
     print('')
     sleep(1.4)
     print('Pietro Heineck')
     print('Iniciante no mundo da programaçao')
     print('Aprendendo Python')
+    print('Discord para suporte: BIG BANG#0728 ')
+    sleep(50)
+    print('.....')
 
 
 if num1 == 5:
@@ -127,5 +137,23 @@ if num1 == 5:
     sleep(1.20)
     if player == comp:
         print('PARABÉNS! Voce conseguiu me vencer!')
+        sleep(50)
+        print('...')
     else:
         print('GANHEI! Eu pensei no número {} e nao no {}!'.format(comp, player))
+        sleep(50)
+        print('...')
+
+
+if num1 == 6:
+    sleep(2)
+    print(' ')
+    print('Dowload do script (Robo interativo.py)')
+    print(' ')
+    sleep(1.6)
+    print('https://github.com/PietroHeineckBIGBANG/ScriptsPython/blob/main/robo%20interativo.py')
+    print('Pietro Heineck:')
+    print(' ')
+    print('COPIA NAO COMÉDIA')
+    sleep(50)
+    print('...........')
